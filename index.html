@@ -16,6 +16,11 @@
 
 	<div class="ui styled sidebar" id="siderBar" style="padding-left: 16px; padding-right: 16px; margin-bottom: 42px;">
 		<div class="ui vertical menu">
+			<div class="item">
+				<div class="ui input">
+					<input type="text" placeholder="Search...">
+				</div>
+			</div>
 			<div class="header item">
 				<i class="user icon"></i> Communities
 			</div>
@@ -49,10 +54,24 @@
 			</a> <a class="active item"> <i class="home icon"></i> Home
 			</a> <a class="item"> <i class="mail icon"></i> Messages
 			</a>
+			<div class="ui dropdown item">
+				Dropdown <i class="icon dropdown"></i>
+				<div class="menu">
+					<a class="item"><i class="edit icon"></i> Action item1</a> <a class="item"><i class="globe icon"></i> Action
+						item2</a> <a class="item"><i class="settings icon"></i> Action item3</a>
+				</div>
+			</div>
 			<div class="right menu">
 				<div class="item">
 					<div class="ui icon input">
 						<input type="text" placeholder="Search..."> <i class="search link icon"></i>
+					</div>
+				</div>
+				<div class="ui dropdown item">
+					Account <i class="icon dropdown"></i>
+					<div class="menu">
+						<a class="item"><i class="edit icon"></i> Edit Profile</a> <a class="item"><i class="globe icon"></i> Choose
+							Language</a> <a class="item"><i class="settings icon"></i> Account Settings</a>
 					</div>
 				</div>
 			</div>
@@ -225,6 +244,8 @@
 			$('#siderBar').sidebar({
 			//overlay : true
 			}).sidebar('show');
+
+			$('.ui.dropdown').dropdown();
 
 			$('#btnAdd').click(function() {
 				$('#modalAdd').modal('show');
