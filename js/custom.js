@@ -1,40 +1,48 @@
 jQuery(document).ready(function($) {
-	
-	$('#btnSiderBar').click(function(event) {
-		$('#siderLeftBar').sidebar('toggle');
-	});
 
-	$('#siderLeftBar').sidebar({
-		// overlay : true,
-		onChange : function() {
-			var id_interval = setInterval(function() {
-				$('#menuTop').width($('body').width());
-				$('#menuBottom').width($('body').width());
-			}, 1);
+			$('#btnSiderBar').click(function(event) {
+						$('#siderLeftBar').sidebar('toggle');
+					});
 
-			setTimeout(function() {
-				clearInterval(id_interval);
-			}, 350);
-		}
-	}).sidebar('show');
+			$('#siderLeftBar').sidebar({
+						// overlay : true,
+						onChange : function() {
+							var id_interval = setInterval(function() {
+										$('#menuTop').width($('body').width());
+										$('#menuBottom').width($('body').width());
+									}, 1);
 
-	$(window).resize(function() {
-		$('#menuTop').width($('body').width());
-		$('#menuBottom').width($('body').width());
-	});
+							setTimeout(function() {
+										clearInterval(id_interval);
+									}, 350);
+						}
+					}).sidebar('show');
 
-	$('.ui.dropdown').dropdown();
+			$(window).resize(function() {
+						$('#menuTop').width($('body').width());
+						$('#menuBottom').width($('body').width());
+					});
 
-	$('#btnAdd').click(function() {
-		$('#modalAdd').modal('show');
-	});
+			$('.ui.dropdown').dropdown();
 
-	$('#btnUpdate').click(function() {
-		$('#modalUpdate').modal('show');
-	});
+			$('#btnAdd').click(function() {
+						$('#modalAdd').modal('show');
+					});
 
-	$('#btnDelete').click(function() {
-		$('#modalDelete').modal('show');
-	});
+			$('#btnUpdate').click(function() {
+						$('#modalUpdate').modal('show');
+					});
 
-});
+			$('#btnDelete').click(function() {
+						$('#modalDelete').modal('show');
+					});
+
+			$('table').tablesort();
+			$('thead th.number').data('sortBy', function(th, td, sorter) {
+						if (!!$(td).attr('data-sort-value')) {
+							return parseInt($(td).attr('data-sort-value'), 10);
+						}
+						return parseInt(td.text(), 10);
+					});
+
+		});
