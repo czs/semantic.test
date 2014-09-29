@@ -5,16 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Semantic 实例</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="semantic/css/semantic.min.css">
-<!-- Latest compiled and minified JS -->
+<link rel="stylesheet" href="semantic/css/semantic.css">
+<link rel="stylesheet" href="css/custom.css">
 <script src="jquery.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="semantic/javascript/semantic.min.js"></script>
+<script src="semantic/javascript/semantic.js"></script>
+<script src="js/custom.js"></script>
 </head>
 <body style="margin: 0">
 
-	<div class="ui styled sidebar" id="siderBar" style="padding-left: 16px; padding-right: 16px; margin-bottom: 42px;">
+	<!-- left sidebar -->
+	<div id="siderLeftBar" class="ui styled sidebar"
+		style="padding-left: 16px; padding-right: 16px; margin-bottom: 42px;">
 		<div class="ui vertical menu">
 			<div class="item">
 				<div class="ui input">
@@ -27,15 +28,16 @@
 			<div class="item">
 				College
 				<div class="menu">
-					<a class="item">Baseball</a> <a class="item">Basketball</a> <a class="item">Golf</a>
+					<a class="item">Baseball</a> <a class="item">Basketball</a> <a
+						class="item">Golf</a>
 				</div>
 			</div>
 			<a class="item"> Dance </a> <a class="item"> Aerobics </a>
 			<div class="header item">
 				<i class="globe icon"></i> Cities
 			</div>
-			<a class="item"> New York </a> <a class="item"> Montreal </a> <a class="item"> Los Angeles </a> <a class="item">
-				San Francisco </a>
+			<a class="item"> New York </a> <a class="item"> Montreal </a> <a
+				class="item"> Los Angeles </a> <a class="item"> San Francisco </a>
 			<div class="header item">
 				<i class="icon calendar"></i> Months
 			</div>
@@ -43,41 +45,65 @@
 		</div>
 	</div>
 
-	<div class="ui menu bottom inverted fixed">
-		<div class="header item">Bottom Sidebar menu</div>
-		<a class="item">One</a> <a class="item">Two</a> <a class="item">Three</a>
-	</div>
-
-	<div class="lhjz-header" style="background-color: #2F2F2F">
-		<div class="ui menu inverted fixed">
-			<a class="item" id="btnSiderBar"> <i class="list layout icon"></i>
-			</a> <a class="active item"> <i class="home icon"></i> Home
-			</a> <a class="item"> <i class="mail icon"></i> Messages
-			</a>
-			<div class="ui dropdown item">
-				Dropdown <i class="icon dropdown"></i>
-				<div class="menu">
-					<a class="item"><i class="edit icon"></i> Action item1</a> <a class="item"><i class="globe icon"></i> Action
-						item2</a> <a class="item"><i class="settings icon"></i> Action item3</a>
+	<!-- top fixed menu -->
+	<div id="menuTop" class="ui menu inverted fixed">
+		<a class="item" id="btnSiderBar"> <i class="list layout icon"></i>
+		</a> <a class="active item"> <i class="home icon"></i> Home
+		</a> <a class="item"> <i class="mail icon"></i> Messages
+		</a>
+		<div class="ui dropdown item">
+			Dropdown <i class="icon dropdown"></i>
+			<div class="menu">
+				<a class="item"><i class="edit icon"></i> Action item1</a> <a
+					class="item"><i class="globe icon"></i> Action item2</a> <a
+					class="item"><i class="settings icon"></i> Action item3</a>
+			</div>
+		</div>
+		<div class="right menu">
+			<div class="item">
+				<div class="ui icon input">
+					<input type="text" placeholder="Search..."> <i
+						class="search link icon"></i>
 				</div>
 			</div>
-			<div class="right menu">
-				<div class="item">
-					<div class="ui icon input">
-						<input type="text" placeholder="Search..."> <i class="search link icon"></i>
-					</div>
-				</div>
-				<div class="ui dropdown item">
-					Account <i class="icon dropdown"></i>
-					<div class="menu">
-						<a class="item"><i class="edit icon"></i> Edit Profile</a> <a class="item"><i class="globe icon"></i> Choose
-							Language</a> <a class="item"><i class="settings icon"></i> Account Settings</a>
-					</div>
+			<div class="ui dropdown item">
+				Account <i class="icon dropdown"></i>
+				<div class="menu">
+					<a class="item"><i class="edit icon"></i> Edit Profile</a> <a
+						class="item"><i class="globe icon"></i> Choose Language</a> <a
+						class="item"><i class="settings icon"></i> Account Settings</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- bottom fixed menu -->
+	<div id="menuBottom" class="ui menu bottom inverted fixed"
+		style="left: auto;">
+		<div class="header item">Bottom Sidebar menu</div>
+		<a class="item">One</a> <a class="item">Two</a> <a class="item">Three</a>
+		<div class="right menu">
+			<div class="item">
+				<div class="ui icon input">
+					<input type="text" placeholder="Search..."> <i
+						class="search link icon"></i>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				Account <i class="icon dropdown"></i>
+				<div class="menu">
+					<a class="item"><i class="edit icon"></i> Edit Profile</a> <a
+						class="item"><i class="globe icon"></i> Choose Language</a> <a
+						class="item"><i class="settings icon"></i> Account Settings</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- middle body content -->
 	<div class="lhjz-body" style="padding-top: 44px;">
+
+		<!-- tool menu bar -->
 		<div class="ui menu">
 			<div class="item">
 				<div class="ui vertical animated button small" id="btnAdd">
@@ -105,9 +131,12 @@
 			</div>
 		</div>
 
-		<div class="lhjz-content" style="padding-left: 10px; padding-right: 10px; padding-bottom: 42px; height: 800px;">
+		<!-- main content -->
+		<div class="lhjz-content"
+			style="padding-left: 10px; padding-right: 10px; padding-bottom: 42px; height: 800px;">
 			<div class="ui warning message">
-				<i class="close icon"></i>Visit our registration page, then try again
+				<i class="close icon"></i>Visit our registration page, then try
+				again
 			</div>
 			<div class="ui segment">
 				<table class="ui table segment">
@@ -148,7 +177,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="lhjz-footer" style="background-color: #000"></div>
 
 	<div class="ui modal" id="modalAdd">
 		<i class="close icon"></i>
@@ -157,14 +185,17 @@
 			<div class="ui error form segment">
 				<div class="ui error message">
 					<div class="header">Action Forbidden</div>
-					<p>You can only sign up for an account once with a given e-mail address.</p>
+					<p>You can only sign up for an account once with a given e-mail
+						address.</p>
 				</div>
 				<div class="two fields">
 					<div class="field">
-						<label>First Name</label> <input placeholder="First Name" type="text">
+						<label>First Name</label> <input placeholder="First Name"
+							type="text">
 					</div>
 					<div class="field">
-						<label>Last Name</label> <input placeholder="Last Name" type="text">
+						<label>Last Name</label> <input placeholder="Last Name"
+							type="text">
 					</div>
 				</div>
 				<div class="field">
@@ -186,7 +217,8 @@
 				</div>
 				<div class="inline field">
 					<div class="ui checkbox">
-						<input type="checkbox"> <label>I agree to the Terms and Conditions</label>
+						<input type="checkbox"> <label>I agree to the
+							Terms and Conditions</label>
 					</div>
 				</div>
 				<div class="ui blue submit button">Submit</div>
@@ -202,7 +234,8 @@
 		<i class="close icon"></i>
 		<div class="header">Header</div>
 		<div class="content">
-			<div class="left">Some content to the left, usually an image or icon</div>
+			<div class="left">Some content to the left, usually an image or
+				icon</div>
 			<div class="right">Some content to the right</div>
 		</div>
 		<div class="actions">
@@ -234,31 +267,5 @@
 			</div>
 		</div>
 	</div>
-
-	<script>
-		jQuery(document).ready(function($) {
-			$('#btnSiderBar').click(function(event) {
-				$('#siderBar').sidebar('toggle');
-			});
-
-			$('#siderBar').sidebar({
-			//overlay : true
-			}).sidebar('show');
-
-			$('.ui.dropdown').dropdown();
-
-			$('#btnAdd').click(function() {
-				$('#modalAdd').modal('show');
-			});
-
-			$('#btnUpdate').click(function() {
-				$('#modalUpdate').modal('show');
-			});
-
-			$('#btnDelete').click(function() {
-				$('#modalDelete').modal('show');
-			});
-		});
-	</script>
 </body>
 </html>
