@@ -12,10 +12,10 @@
 <script src="semantic/javascript/semantic.js"></script>
 <script src="js/custom.js"></script>
 </head>
-<body style="margin: 0">
+<body style="height: 100%; max-height: 100%; overflow: hidden; position: relative;">
 
 	<!-- left sidebar -->
-	<div id="siderLeftBar" class="ui styled sidebar" style="padding-left: 16px; padding-right: 16px; margin-bottom: 42px;">
+	<div id="siderLeftBar" class="ui styled sidebar">
 		<div class="ui vertical menu">
 			<div class="item">
 				<div class="ui input">
@@ -41,7 +41,8 @@
 	</div>
 
 	<!-- top fixed menu -->
-	<div id="menuTop" class="ui menu inverted fixed">
+	<div id="menuTop" class="ui menu inverted"
+		style="height: 43px; overflow-y: hidden; margin-top: 0; margin-bottom: 0; top: 0; border-radius: 0;">
 		<a class="item" id="btnSiderBar"> <i class="list layout icon"></i>
 		</a> <a class="active item"> <i class="home icon"></i> Home
 		</a> <a class="item"> <i class="mail icon"></i> Messages
@@ -70,16 +71,16 @@
 	</div>
 
 	<!-- bottom fixed menu -->
-	<div id="menuBottom" class="ui menu bottom inverted fixed" style="left: auto;">
+	<!-- <div id="menuBottom" class="ui menu bottom inverted fixed" style="left: auto;">
 		<div class="header item">Bottom Sidebar menu</div>
 		<a class="item">One</a> <a class="item">Two</a> <a class="item">Three</a>
 		<div class="right menu">
 			<a class="item">One</a> <a class="item">Two</a> <a class="item">Three</a>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- middle body content -->
-	<div class="lhjz-body" style="padding-top: 44px;">
+	<div class="lhjz-body" style="position: absolute; width: 100%; overflow: auto; bottom: 0; top: 43px;">
 
 		<!-- tool menu bar -->
 		<div class="ui menu">
@@ -110,7 +111,7 @@
 		</div>
 
 		<!-- main content -->
-		<div class="lhjz-content" style="padding-left: 10px; padding-right: 10px; padding-bottom: 42px; height: 800px;">
+		<div class="lhjz-content" style="padding-left: 10px; padding-right: 10px; margin-bottom: 42px;">
 			<div class="ui warning message">
 				<i class="close icon"></i>Visit our registration page, then try again
 			</div>

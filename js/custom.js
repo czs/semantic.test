@@ -6,22 +6,22 @@ jQuery(document).ready(function($) {
 
 			$('#siderLeftBar').sidebar({
 						// overlay : true,
-						onChange : function() {
-							var id_interval = setInterval(function() {
-										$('#menuTop').width($('body').width());
-										$('#menuBottom').width($('body').width());
-									}, 1);
-
-							setTimeout(function() {
-										clearInterval(id_interval);
-									}, 350);
-						}
+//						onChange : function() {
+//							var id_interval = setInterval(function() {
+//										$('#menuTop').width($('body').width());
+//										$('#menuBottom').width($('body').width());
+//									}, 1);
+//
+//							setTimeout(function() {
+//										clearInterval(id_interval);
+//									}, 350);
+//						}
 					}).sidebar('show');
 
-			$(window).resize(function() {
-						$('#menuTop').width($('body').width());
-						$('#menuBottom').width($('body').width());
-					});
+//			$(window).resize(function() {
+//						$('#menuTop').width($('body').width());
+//						$('#menuBottom').width($('body').width());
+//					});
 
 			$('.ui.dropdown').dropdown();
 
