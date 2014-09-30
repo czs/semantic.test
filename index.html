@@ -12,7 +12,7 @@
 <script src="semantic/javascript/semantic.js"></script>
 <script src="js/custom.js"></script>
 </head>
-<body style="height: 100%; max-height: 100%; overflow: hidden; position: relative;">
+<body style="height: 100%; max-height: 100%; overflow: hidden;">
 
 	<!-- left sidebar -->
 	<div id="siderLeftBar" class="ui styled sidebar">
@@ -40,38 +40,39 @@
 		</div>
 	</div>
 
-	<!-- top fixed menu -->
-	<div id="menuTop" class="ui menu inverted"
-		style="height: 43px; overflow-y: hidden; margin-top: 0; margin-bottom: 0; top: 0; border-radius: 0;">
-		<a class="item" id="btnSiderBar"> <i class="list layout icon"></i>
-		</a> <a class="active item"> <i class="home icon"></i> Home
-		</a> <a class="item"> <i class="mail icon"></i> Messages
-		</a>
-		<div class="ui dropdown item pointing">
-			Dropdown <i class="icon dropdown"></i>
-			<div class="menu">
-				<a class="item"><i class="edit icon"></i> Action item1</a> <a class="item"><i class="globe icon"></i> Action
-					item2</a> <a class="item"><i class="settings icon"></i> Action item3</a>
-			</div>
-		</div>
-		<div class="right menu">
-			<div class="item">
-				<div class="ui icon input">
-					<input type="text" placeholder="Search..."> <i class="search link icon"></i>
-				</div>
-			</div>
+	<div style="height: 100%; max-height: 100%; position: relative;">
+		<!-- top fixed menu -->
+		<div id="menuTop" class="ui menu inverted"
+			style="height: 43px; overflow-y: hidden; margin-top: 0; margin-bottom: 0; top: 0; border-radius: 0;">
+			<a class="item" id="btnSiderBar"> <i class="list layout icon"></i>
+			</a> <a class="active item"> <i class="home icon"></i> Home
+			</a> <a class="item"> <i class="mail icon"></i> Messages
+			</a>
 			<div class="ui dropdown item pointing">
-				Account <i class="icon dropdown"></i>
+				Dropdown <i class="icon dropdown"></i>
 				<div class="menu">
-					<a class="item"><i class="edit icon"></i> Edit Profile</a> <a class="item"><i class="globe icon"></i> Choose
-						Language</a> <a class="item"><i class="settings icon"></i> Account Settings</a>
+					<a class="item"><i class="edit icon"></i> Action item1</a> <a class="item"><i class="globe icon"></i> Action
+						item2</a> <a class="item"><i class="settings icon"></i> Action item3</a>
+				</div>
+			</div>
+			<div class="right menu">
+				<div class="item">
+					<div class="ui icon input">
+						<input type="text" placeholder="Search..."> <i class="search link icon"></i>
+					</div>
+				</div>
+				<div class="ui dropdown item pointing">
+					Account <i class="icon dropdown"></i>
+					<div class="menu">
+						<a class="item"><i class="edit icon"></i> Edit Profile</a> <a class="item"><i class="globe icon"></i> Choose
+							Language</a> <a class="item"><i class="settings icon"></i> Account Settings</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- bottom fixed menu -->
-	<!-- <div id="menuBottom" class="ui menu bottom inverted fixed" style="left: auto;">
+		<!-- bottom fixed menu -->
+		<!-- <div id="menuBottom" class="ui menu bottom inverted fixed" style="left: auto;">
 		<div class="header item">Bottom Sidebar menu</div>
 		<a class="item">One</a> <a class="item">Two</a> <a class="item">Three</a>
 		<div class="right menu">
@@ -79,112 +80,114 @@
 		</div>
 	</div> -->
 
-	<!-- middle body content -->
-	<div class="lhjz-body" style="position: absolute; width: 100%; overflow: auto; bottom: 0; top: 43px;">
 
-		<!-- tool menu bar -->
-		<div class="ui menu">
-			<div class="item">
-				<div class="ui vertical animated button small" id="btnAdd">
-					<div class="hidden content">添加</div>
-					<div class="visible content">
-						<i class="add icon"></i>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="ui vertical animated button small" id="btnUpdate">
-					<div class="hidden content">更新</div>
-					<div class="visible content">
-						<i class="edit icon"></i>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="ui vertical animated button small" id="btnDelete">
-					<div class="hidden content">删除</div>
-					<div class="visible content">
-						<i class="delete icon"></i>
-					</div>
-				</div>
-			</div>
-		</div>
+		<!-- middle body content -->
+		<div class="lhjz-body" style="position: absolute; width: 100%; overflow: auto; bottom: 0; top: 43px;">
 
-		<!-- main content -->
-		<div class="lhjz-content" style="padding-left: 10px; padding-right: 10px; margin-bottom: 42px;">
-			<div class="ui warning message">
-				<i class="close icon"></i>Visit our registration page, then try again
+			<!-- tool menu bar -->
+			<div class="ui menu">
+				<div class="item">
+					<div class="ui vertical animated button small" id="btnAdd">
+						<div class="hidden content">添加</div>
+						<div class="visible content">
+							<i class="add icon"></i>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ui vertical animated button small" id="btnUpdate">
+						<div class="hidden content">更新</div>
+						<div class="visible content">
+							<i class="edit icon"></i>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="ui vertical animated button small" id="btnDelete">
+						<div class="hidden content">删除</div>
+						<div class="visible content">
+							<i class="delete icon"></i>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="ui segment">
-				<table class="ui celled sortable table segment">
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>Status</th>
-							<th>Notes</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>John</td>
-							<td>Approved</td>
-							<td>None</td>
-						</tr>
-						<tr>
-							<td>Jamie</td>
-							<td>Approved</td>
-							<td>Requires call</td>
-						</tr>
-						<tr>
-							<td>Jill</td>
-							<td>Denied</td>
-							<td>None</td>
-						</tr>
-						<tr>
-							<td>John</td>
-							<td>Approved</td>
-							<td>None</td>
-						</tr>
-						<tr>
-							<td>Jamie</td>
-							<td>Approved</td>
-							<td>Requires call</td>
-						</tr>
-						<tr>
-							<td>Jill</td>
-							<td>Denied</td>
-							<td>None</td>
-						</tr>
-						<tr>
-							<td>John</td>
-							<td>Approved</td>
-							<td>None</td>
-						</tr>
-						<tr>
-							<td>Jamie</td>
-							<td>Approved</td>
-							<td>Requires call</td>
-						</tr>
-						<tr>
-							<td>Jill</td>
-							<td>Denied</td>
-							<td>None</td>
-						</tr>
-					</tbody>
-					<tfoot>
-						<tr>
-							<th colspan="3">
-								<div class="ui blue labeled icon button">
-									<i class="user icon"></i> Add User
-								</div>
-							</th>
-						</tr>
-					</tfoot>
-				</table>
+
+			<!-- main content -->
+			<div class="lhjz-content" style="padding-left: 10px; padding-right: 10px; margin-bottom: 42px;">
+				<div class="ui warning message">
+					<i class="close icon"></i>Visit our registration page, then try again
+				</div>
+				<div class="ui segment">
+					<table class="ui celled sortable table segment">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Status</th>
+								<th>Notes</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>John</td>
+								<td>Approved</td>
+								<td>None</td>
+							</tr>
+							<tr>
+								<td>Jamie</td>
+								<td>Approved</td>
+								<td>Requires call</td>
+							</tr>
+							<tr>
+								<td>Jill</td>
+								<td>Denied</td>
+								<td>None</td>
+							</tr>
+							<tr>
+								<td>John</td>
+								<td>Approved</td>
+								<td>None</td>
+							</tr>
+							<tr>
+								<td>Jamie</td>
+								<td>Approved</td>
+								<td>Requires call</td>
+							</tr>
+							<tr>
+								<td>Jill</td>
+								<td>Denied</td>
+								<td>None</td>
+							</tr>
+							<tr>
+								<td>John</td>
+								<td>Approved</td>
+								<td>None</td>
+							</tr>
+							<tr>
+								<td>Jamie</td>
+								<td>Approved</td>
+								<td>Requires call</td>
+							</tr>
+							<tr>
+								<td>Jill</td>
+								<td>Denied</td>
+								<td>None</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th colspan="3">
+									<div class="ui blue labeled icon button">
+										<i class="user icon"></i> Add User
+									</div>
+								</th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
-
+	
 	<div class="ui modal" id="modalAdd">
 		<i class="close icon"></i>
 		<div class="header">Header</div>
@@ -212,12 +215,6 @@
 							<div class="item" data-value="female">Female</div>
 						</div>
 					</div>
-				</div>
-				<div class="field">
-					<label>Username</label> <input placeholder="Username" type="text">
-				</div>
-				<div class="field">
-					<label>Password</label> <input type="password">
 				</div>
 				<div class="inline field">
 					<div class="ui checkbox">

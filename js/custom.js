@@ -5,25 +5,16 @@ jQuery(document).ready(function($) {
 					});
 
 			$('#siderLeftBar').sidebar({
-						// overlay : true,
-//						onChange : function() {
-//							var id_interval = setInterval(function() {
-//										$('#menuTop').width($('body').width());
-//										$('#menuBottom').width($('body').width());
-//									}, 1);
-//
-//							setTimeout(function() {
-//										clearInterval(id_interval);
-//									}, 350);
-//						}
+					// overlay : true
 					}).sidebar('show');
 
-//			$(window).resize(function() {
-//						$('#menuTop').width($('body').width());
-//						$('#menuBottom').width($('body').width());
-//					});
+			$(window).resize(function() {
+						$('body').css('height', '100%');
+					});
 
 			$('.ui.dropdown').dropdown();
+
+			$('.ui.modal').modal();
 
 			$('#btnAdd').click(function() {
 						$('#modalAdd').modal('show');
