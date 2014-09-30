@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 	$('.ui.dropdown').dropdown();
 
 	$('.ui.modal').modal({
-		closable : false,
+		// closable : false,
 		onHidden : function() {
 			$('body').css('height', '100%');
 		}
