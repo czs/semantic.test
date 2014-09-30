@@ -6027,7 +6027,7 @@ $.fn.modal = function(parameters) {
           screenHeight: function() {
             if(module.cache.height > module.cache.pageHeight) {
               module.debug('Modal is taller than page content, resizing page height');
-              bodyOldHeight = $body.css('height');
+              bodyOldHeight = $body.get(0).style.height || $body.css('height');
               $body
                 .css('height', module.cache.height + settings.padding)
               ;
