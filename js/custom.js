@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 			$('body').css('height', '100%');
 		}
 	});
-
+	
 	$('#btnAdd').click(function() {
 		$('#modalAdd').modal('show');
 	});
